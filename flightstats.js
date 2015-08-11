@@ -47,7 +47,7 @@ FlightStatsAPIClient.prototype.generateFlightScheduleURL = function(options) {
     var url = SCHEDULE_URL;
     url += options.carrier_code + "/" + options.flight_no + "/";
     url += "departing/";
-    url += options.year + "/" + options.month + "/" + options.date
+    url += options.date.year + "/" + options.date.month + "/" + options.date.date
     url += "?appId=" + this.APP_ID + "&appKey=" + this.APP_KEY;
     return url;
 }
