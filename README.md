@@ -59,3 +59,18 @@ flightStatsClient.callAPI(status_url,function(status,data){
 });
 
 ```
+### Flightstats Alerts
+
+```
+var add_alert_url = flightStatsClient.watchFlightURL({
+	carrier: CARRIER NAME,
+	flight_no: FLIGHT NUMBER,
+	arr_airport: ARRIVAL AIRPORT,
+	alert_type: ALERT TYPE, //arr_airport should be set if alert_type === 'arriving', if alert_type === 'departing', dep_airport should be set
+	date:{
+		year: YEAR,
+		month: MONTH,
+		date: DATE
+	}
+});
+```
