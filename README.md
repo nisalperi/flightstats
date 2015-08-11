@@ -2,7 +2,7 @@
 
 ## Usage
 
-```
+```javascript
 var flightStats = require('./flightstats.js');
 
 var flightStatsClient = new flightStats.client({
@@ -15,7 +15,7 @@ var flightStatsClient = new flightStats.client({
 
 `instanceName.callAPI()` can be used to call the Flightstats API. The entire FlightStats API is based on "GET" for some reason. URLs for different API can be generated using functions listed below.
 
-```
+```javascript
 flightStatsClient.callAPI(url,function(status,data){
 	//console.log(status,data);
 });
@@ -23,7 +23,7 @@ flightStatsClient.callAPI(url,function(status,data){
 
 ### Flightstats Schedule API
 
-```
+```javascript
 var schedule_url = flightStatsClient.generateFlightScheduleURL({
 	carrier_code: CARRIER CODE,
 	flight_no: FLIGHT NO,
@@ -42,7 +42,7 @@ flightStatsClient.callAPI(schedule_url,function(status,data){
 
 ### Flightstats Status API
 
-```
+```javascript
 var status_url = flightStatsClient.generateFlightStatusURL({
     carrier_code: CARRIER CODE,
 	flight_no: FLIGHT NO,
@@ -61,7 +61,7 @@ flightStatsClient.callAPI(status_url,function(status,data){
 ```
 ### Flightstats Alerts
 
-```
+```javascript
 var add_alert_url = flightStatsClient.watchFlightURL({
 	carrier: CARRIER NAME,
 	flight_no: FLIGHT NUMBER,
