@@ -1,0 +1,15 @@
+{
+  "name": "FlightStats",
+  "version": "1.0.0",
+  "description": "Node client to access Flight Stats API. Documentation at https://developer.flightstats.com.",
+  "main": "flightstats.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flight",
+    "flighstats"
+  ],
+  "author": "Nisal Periyapperuma <nisalp2006@gmail.com>",
+  "license": "ISC"
+}
