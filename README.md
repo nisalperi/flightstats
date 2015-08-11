@@ -21,8 +21,7 @@ flightStatsClient.callAPI(url,function(status,data){
 });
 ```
 
-
-### Using the Flightstats Schedule API
+### Flightstats Schedule API
 
 ```
 var schedule_url = flightStatsClient.generateFlightScheduleURL({
@@ -36,6 +35,26 @@ var schedule_url = flightStatsClient.generateFlightScheduleURL({
 });
 
 flightStatsClient.callAPI(schedule_url,function(status,data){
+	console.log(status,data);
+});
+
+```
+
+### Flightstats Status API
+
+```
+var status_url = flightStatsClient.generateFlightStatusURL({
+    carrier_code: CARRIER CODE,
+	flight_no: FLIGHT NO,
+	date:{
+		year: YEAR,
+		month: MONTH,
+		date: DATE
+	},
+	status_type: "dep" or "arr"
+});
+
+flightStatsClient.callAPI(status_url,function(status,data){
 	console.log(status,data);
 });
 

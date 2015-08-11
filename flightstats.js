@@ -64,9 +64,9 @@ FlightStatsAPIClient.prototype.generateFlightStatusURL = function(options, callb
     if (typeof options.status_type === 'undefined')options.status_type = 'dep'
 
     url += options.flight_no + "/" + options.status_type;
-    url += options.year + "/";
-    url += options.month + "/";
-    url += options.date;
+    url += options.date.year + "/";
+    url += options.date.month + "/";
+    url += options.date.date;
     url += "?appId=" + this.APP_ID + "&" + "appKey=" + this.APP_KEY + "&utc=false";
     return url;
 }
