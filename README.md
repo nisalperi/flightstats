@@ -1,4 +1,4 @@
-# Node FlightStat Client
+# Node FlightStats Client
 
 ## Usage
 
